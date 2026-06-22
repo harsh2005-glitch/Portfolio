@@ -1,0 +1,116 @@
+.about-section { background: transparent; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* Image */
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image-frame {
+  aspect-ratio: 1;
+  max-width: 360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow 4s infinite;
+}
+
+.about-avatar {
+  width: 140px; height: 140px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.about-image-glow {
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Floating chips */
+.float-chip {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--blur-light);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  box-shadow: var(--glass-shadow);
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+
+.chip-react { top: 12%; right: -10%; }
+.chip-node  { bottom: 18%; left: -8%; }
+
+/* Text */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-text h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+}
+
+/* Facts */
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.fact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--blur-light);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.07);
+}
+
+.fact-item svg { color: var(--primary); }
+
+/* Actions */
+.about-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  .about-facts, .about-actions { justify-content: center; }
+  .chip-react { top: 5%; right: 5%; }
+  .chip-node  { bottom: 5%; left: 5%; }
+}

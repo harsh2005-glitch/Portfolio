@@ -1,0 +1,100 @@
+.experience-section {
+  background: linear-gradient(180deg, transparent 0%, rgba(99,102,241,0.03) 50%, transparent 100%);
+}
+
+.experience-section h2 { margin-top: 0.5rem; margin-bottom: 3rem; }
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--gradient-primary);
+  transform-origin: top;
+  box-shadow: 0 0 16px rgba(99,102,241,0.3);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  width: 45%;
+  margin-bottom: 3rem;
+}
+
+.timeline-item.left  { left: 0; padding-right: 3rem; }
+.timeline-item.right { left: 55%; padding-left: 3rem; }
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  top: 1.5rem;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 4px 14px rgba(99,102,241,0.4);
+}
+
+.timeline-item.left  .timeline-dot { right: -18px; }
+.timeline-item.right .timeline-dot { left: -18px; }
+
+.dot-work { background: var(--gradient-primary); }
+.dot-edu  { background: linear-gradient(135deg, #22d3ee, #6366f1); }
+
+/* Card */
+.timeline-card {
+  padding: 1.5rem;
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.timeline-org {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--text-tertiary);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .timeline-line { left: 18px; }
+  .timeline-item { width: 100%; left: 0 !important; padding-left: 3.5rem !important; padding-right: 0 !important; }
+  .timeline-item .timeline-dot { left: 0 !important; right: auto !important; }
+}
