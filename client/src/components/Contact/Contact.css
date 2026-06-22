@@ -62,6 +62,8 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text-primary);
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .contact-orb {
@@ -148,4 +150,8 @@
 
 @media (max-width: 500px) {
   .form-row { grid-template-columns: 1fr; }
+  .contact-info-card { padding: 1.5rem; }
+  .contact-form { padding: 1.5rem; }
+  .info-value { font-size: 0.85rem; }
+  .submit-btn { width: 100%; justify-content: center; }
 }

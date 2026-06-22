@@ -88,6 +88,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -343,4 +345,38 @@ img, video {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   body { cursor: auto; }
+
+  /* Prevent ANY element from causing horizontal scroll */
+  section, main, footer, header, div {
+    max-width: 100%;
+  }
+
+  /* Tighter section padding on mobile */
+  .section {
+    padding: 3.5rem 1rem;
+  }
+
+  /* Container stays inside viewport */
+  .container {
+    padding: 0 1rem;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Smaller h2 headings on mobile */
+  h2 {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+  }
+
+  /* Filter tabs wrap nicely */
+  .filter-tabs {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: var(--radius-lg);
+  }
+
+  /* CP stats cards full width */
+  .cp-cards {
+    grid-template-columns: 1fr;
+  }
 }

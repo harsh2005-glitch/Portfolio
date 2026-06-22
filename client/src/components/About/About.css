@@ -113,4 +113,11 @@
   .about-facts, .about-actions { justify-content: center; }
   .chip-react { top: 5%; right: 5%; }
   .chip-node  { bottom: 5%; left: 5%; }
+  .about-image-frame { max-width: 280px; }
+}
+
+@media (max-width: 480px) {
+  .about-image-frame { max-width: 240px; }
+  .about-actions { flex-direction: column; align-items: center; }
+  .about-actions .btn { width: 100%; justify-content: center; }
 }
